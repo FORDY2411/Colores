@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<ScrollPane fitToWidth="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="538.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/26" fx:controller="com.mycompany.modelorgb.PrimaryController">
+   <content>
+      <VBox prefHeight="524.0" prefWidth="585.0">
+         <children>
+            <Label prefHeight="18.0" prefWidth="651.0" text="EDITOR DE COLORES RGB POR LEONARDO DAVID ESTRADA AMADOR" />
+            <Separator prefWidth="200.0" />
+            <Label text="Valores RGB mediante TextField" />
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="txtRojo" promptText="Rojo">
+                     <tooltip>
+                        <Tooltip text="Introduzca un valor entre 0 y 255" />
+                     </tooltip>
+                  </TextField>
+                  <TextField fx:id="txtVerde" promptText="Verde" />
+                  <TextField fx:id="txtAzul" promptText="Azul" />
+                  <Pane fx:id="paneTextFields" prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+            <Label text="Valores RGB mediante spinner" />
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Spinner fx:id="spnRojo">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <tooltip>
+                        <Tooltip text="Selecciona un valor ennun rango de 0 a 255" />
+                     </tooltip>
+                  </Spinner>
+                  <Spinner fx:id="spnVerde" />
+                  <Spinner fx:id="spnAzul" />
+                  <Pane fx:id="paneSpinners" prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+            <Label text="Escala RGB mediante Slider" />
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Slider fx:id="sldRojo" max="255.0" showTickLabels="true" />
+                  <Slider fx:id="sldVerde" max="255.0" showTickLabels="true" />
+                  <Slider fx:id="sldAzul" max="255.0" showTickLabels="true" />
+                  <Pane fx:id="paneSliders" prefHeight="200.0" prefWidth="200.0" />
+                  <Separator prefWidth="200.0" />
+               </children>
+            </HBox>
+            <Label text="Combinacion de colores mediante CheckBox" />
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <CheckBox fx:id="chkRojo" mnemonicParsing="false" text="Rojo" />
+                  <CheckBox fx:id="chkVerde" mnemonicParsing="false" text="Verde" />
+                  <CheckBox fx:id="chkAzul" mnemonicParsing="false" text="Azul" />
+                  <Pane fx:id="paneChackBoxes" prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+            <Label text="Seleccion de componente mediante  Radiobutton" />
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <RadioButton fx:id="radRojo" mnemonicParsing="false" text="Rojo">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="grupoColores" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="radVerde" mnemonicParsing="false" text="Verde" toggleGroup="$grupoColores" />
+                  <RadioButton fx:id="radAzul" mnemonicParsing="false" text="Azul" toggleGroup="$grupoColores" />
+                  <Pane fx:id="paneRadioButtons" prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+            <Label text="Seleccion Mediante ToggleButton" />
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ToggleButton fx:id="tglRojo" mnemonicParsing="false" text="Rojo">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="grupoToggle" />
+                     </toggleGroup>
+                  </ToggleButton>
+                  <ToggleButton fx:id="tglVerde" mnemonicParsing="false" text="Verde" toggleGroup="$grupoToggle" />
+                  <ToggleButton fx:id="tglAzul" mnemonicParsing="false" text="Azul" toggleGroup="$grupoToggle" />
+                  <Pane fx:id="paneToggleButtons" prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+            <Label text="Seleccion de color mediante ColorPicker" />
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ColorPicker fx:id="cpColor">
+                     <tooltip>
+                        <Tooltip text="Marca para activar este componente en 255" />
+                     </tooltip>
+                  </ColorPicker>
+                  <Pane fx:id="paneColorPicker" prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+            <Label text="Codigo HEX mediante TextField" />
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="txtHex" promptText="#FFFFFF">
+                     <tooltip>
+                        <Tooltip text="Ingrese un codigo hexadecimal (ej. #FF0000)" />
+                     </tooltip>
+                  </TextField>
+                  <Pane fx:id="paneHex" prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+            <Label text="Informacion del Color/Resumen" />
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextArea fx:id="txtAreaInfo" editable="false" prefHeight="200.0" prefWidth="200.0">
+                     <tooltip>
+                        <Tooltip text="Muestra el registro de cambio de color" />
+                     </tooltip>
+                  </TextArea>
+                  <Pane fx:id="paneAreaInfo" prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </content>
+</ScrollPane>
